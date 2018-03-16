@@ -3,7 +3,7 @@
 {% set data = load_setup_py_data() %}
 {% set version = data.get('version') %}
 {% if dev %}
-{%   set build = 5 %}
+{%   set build = 7 %}
 {%   set rev = 'wip' %}
 {% else %}
 {%   set build = 0 %}
