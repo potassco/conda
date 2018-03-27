@@ -16,7 +16,7 @@ package:
 source:
 {% if dev %}
   git_rev: {{ rev }}
-  git_url: https://github.com/rkaminsk/{{ name }}.git
+  git_url: https://github.com/potassco/{{ name }}.git
 {% else %}
   url: https://github.com/potassco/{{ name }}/archive/v{{ version }}.zip
 {% endif %}
@@ -47,5 +47,5 @@ about:
       Telingo is a solver for temporal logic programs.
   license_file: LICENSE.md
   doc_url: https://potassco.org/
-  dev_url: https://github.com/rkaminsk/{{ name }}
+  dev_url: https://github.com/potassco/{{ name }}
 
