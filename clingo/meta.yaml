@@ -26,13 +26,13 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - vc >=14 [win]
     - python
   run:
     - python
 
 build:
   number: {{ build }}
+  skip: True [win and vc<14]
 
 test:
   commands:
