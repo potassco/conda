@@ -1,0 +1,29 @@
+{% set name = 're2c' %}
+{% set version = "1.0.3" %}
+{% set build = 0 %}
+
+package:
+  name: re2c
+  version: {{ version }}
+
+source:
+  url: https://github.com/skvadrik/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+
+build:
+  number: {{ build }}
+
+test:
+  commands:
+    - {{ name }} --version
+
+about:
+  home: http://re2c.org/
+  license: Public Domain
+  summary: re2c is a free and open-source lexer generator for C and C++
+  doc_url: http://re2c.org/manual/manual.html
+  dev_url: https://github.com/skvadrik/{{ name }}
