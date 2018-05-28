@@ -1,0 +1,1 @@
+xcopy . "%LIBRARY_BIN%" /S /Y /Exclude:bld.bat

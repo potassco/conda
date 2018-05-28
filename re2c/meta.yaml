@@ -7,12 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/skvadrik/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/skvadrik/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz [not win]
+  url: https://cs.uni-potsdam.de/~kaminski/{{ name }}-{{ version }}.zip [win]
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }} [not win]
+    - {{ compiler('cxx') }} [not win]
 
 build:
   number: {{ build }}
