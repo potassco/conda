@@ -24,8 +24,11 @@ source:
 requirements:
   build:
     - cmake
-    - win_flex_bison<2.5 [win]
+{% if dev %}
+    - win_flex_bison [win]
     - bison [not win]
+    - re2c
+{% endif %}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
