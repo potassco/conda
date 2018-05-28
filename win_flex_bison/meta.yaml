@@ -14,5 +14,5 @@ build:
 
 about:
   home: https://github.com/lexxmark/winflexbison
-  summary: Win flex-bison is a port Flex & Bison tools to the Windows platform
+  summary: A port of Flex & Bison to the Windows platform
   license: GNU General Public License version 3.0 (GPLv3)

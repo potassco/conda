@@ -25,6 +25,6 @@ test:
 about:
   home: http://re2c.org/
   license: Public Domain
-  summary: re2c is a free and open-source lexer generator for C and C++
+  summary: A lexer generator for C and C++
   doc_url: http://re2c.org/manual/manual.html
   dev_url: https://github.com/skvadrik/{{ name }}
