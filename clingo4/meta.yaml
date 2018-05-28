@@ -1,6 +1,6 @@
 {% set name = 'clingo' %}
 {% set version = "4.5.4" %}
-{% set build = 0 %}
+{% set build = 1 %}
 
 package:
   name: {{ name }}
@@ -11,13 +11,15 @@ source:
 
 requirements:
   build:
-    - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - vc >=14 [win]
     - python
+    - tbb
+    - scons <3
   run:
     - python
+    - tbb
 
 build:
   number: {{ build }}

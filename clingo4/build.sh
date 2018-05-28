@@ -6,7 +6,7 @@ mkdir build
 cat <<EOF > build/release.py
 CXX = '${CXX}'
 CXXFLAGS = '${CXXFLAGS}'
-CPPPATH = []
+CPPPATH = ['${CONDA_PREFIX}/include']
 CPPDEFINES = {'NDEBUG': 1}
 LIBS = []
 LIBPATH = []
@@ -21,7 +21,7 @@ PYTHON_CONFIG = 'python${PY_VER}-config'
 PKG_CONFIG = 'pkg-config'
 WITH_PYTHON = 'auto'
 WITH_LUA = False
-WITH_TBB = False
+WITH_TBB = 'tbb'
 WITH_CPPUNIT = False
 EOF
 
