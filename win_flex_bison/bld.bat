@@ -1,0 +1,1 @@
+xcopy . "%LIBRARY_BIN%" /O /X /E /H /K

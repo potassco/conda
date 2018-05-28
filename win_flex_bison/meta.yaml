@@ -1,0 +1,18 @@
+{% set name = 'win_flex_bison' %}
+{% set version = "2.5.14" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  url: https://cs.uni-potsdam.de/~kaminski/{{ name }}-{{ version }}.zip
+
+build:
+  number: 0
+  skip: true  # [unix]
+
+about:
+  home: https://github.com/lexxmark/winflexbison
+  summary: Win flex-bison is a port Flex & Bison tools to the Windows platform
+  license: GNU General Public License version 3.0 (GPLv3)
