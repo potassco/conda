@@ -1,1 +1,1 @@
-xcopy . "%LIBRARY_BIN%" /O /X /E /H /K
+xcopy . "%LIBRARY_BIN%" /S /Y /Exclude:bld.bat

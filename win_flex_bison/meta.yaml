@@ -1,5 +1,5 @@
 {% set name = 'win_flex_bison' %}
-{% set version = "2.5.14" %}
+{% set version = "2.4.12" %}
 
 package:
   name: {{ name }}

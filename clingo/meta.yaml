@@ -24,6 +24,8 @@ source:
 requirements:
   build:
     - cmake
+    - win_flex_bison<2.5 [win]
+    - bison [not win]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
