@@ -1,6 +1,6 @@
 aspcud --version
 aspcud --help
-cat <<EOF
+cat >test.cudf <<EOF
 package: a
 version: 1
 conflicts: a , b
