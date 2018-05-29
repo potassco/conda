@@ -36,11 +36,6 @@ build:
   number: {{ build }}
   skip: True [win and vc<14]
 
-test:
-  commands:
-    - aspcud --version
-    - aspcud --help
-
 about:
   home:  https://potassco.org/
   license: MIT
