@@ -5,11 +5,10 @@ cmake -G "%CMAKE_GENERATOR%" -H. -Bbuild ^
     -DCMAKE_C_COMPILER="%CC%" ^
     -DPYTHON_EXECUTABLE="%PYTHON%" ^
     -DCLINGO_REQUIRE_PYTHON=ON ^
-    -DCMAKE_INSTALL_PREFIX="%PREFIX%" ^
+    -DCMAKE_INSTALL_PREFIX="%LIBRARY_PREFIX%" ^
     -DPYCLINGO_USER_INSTALL=OFF ^
     -DCLINGO_BUILD_WITH_LUA=OFF ^
-    -DCLINGO_MANAGE_RPATH=OFF ^
-    -DCMAKE_INSTALL_BINDIR="."
+    -DCLINGO_MANAGE_RPATH=OFF
 
 cmake --build build --config Release
 cmake --build build --config Release --target install
