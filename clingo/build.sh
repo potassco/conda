@@ -3,6 +3,8 @@
 mkdir build
 cd build
 
+export M4="$(command -v m4)"
+
 if [ -z "${PYTHON}" ]; then
     PYTHON="$(which python)"
 fi
