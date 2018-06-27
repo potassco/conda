@@ -1,9 +1,8 @@
 {% set name = 'telingo' %}
 {% set dev = true %}
-{% set data = load_setup_py_data() %}
-{% set version = data.get('version') %}
+{% set version = '1.0.1' %}
 {% if dev %}
-{%   set build = 9 %}
+{%   set build = 0 %}
 {%   set rev = 'wip' %}
 {% else %}
 {%   set build = 0 %}
