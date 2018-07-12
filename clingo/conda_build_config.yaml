@@ -1,3 +1,7 @@
 python:
-    - 2.7
+    - 2.7 [not win]
     - 3.6
+
+# from https://github.com/phracker/MacOSX-SDKs
+CONDA_BUILD_SYSROOT:
+    - /opt/MacOSX10.9.sdk # [osx]
