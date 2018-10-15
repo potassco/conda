@@ -39,7 +39,7 @@ build:
 
 test:
   commands:
-    - {{ name }} --version
+    - clingo-dl --version
 
 about:
   home:  https://potassco.org/
