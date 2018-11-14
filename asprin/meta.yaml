@@ -1,7 +1,7 @@
 {% set data = load_setup_py_data() %}
 {% set name = 'asprin' %}
 {% set version = '3.1.0' %}
-{% set dev = true %}
+{% set dev = false %}
 {% if dev %}
 {%   set version = "3.1.0" %}
 {%   set build = 0 %}
