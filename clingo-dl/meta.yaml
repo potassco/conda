@@ -1,5 +1,5 @@
 {% set name = 'clingoDL' %}
-{% set dev = true %}
+{% set dev = false %}
 {% if dev %}
 {%   set version = "1.0.0" %}
 {%   set build = 2 %}
