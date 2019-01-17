@@ -2,7 +2,7 @@
 {% set dev = false %}
 {% if dev %}
 {%   set version = "1.0.0" %}
-{%   set build = 2 %}
+{%   set build = 3 %}
 {%   set rev = 'wip' %}
 {% else %}
 {%   set version = "1.0.0" %}
