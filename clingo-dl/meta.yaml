@@ -1,5 +1,5 @@
 {% set name = 'clingoDL' %}
-{% set dev = false %}
+{% set dev = true %}
 {% if dev %}
 {%   set version = "1.0.0" %}
 {%   set build = 3 %}
@@ -24,14 +24,14 @@ source:
 requirements:
   build:
     - cmake
-    - clingo
+    - clingo >=5.4
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - python
   run:
     - python
-    - clingo
+    - clingo >=5.4
 
 build:
   number: {{ build }}
