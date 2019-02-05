@@ -4,11 +4,7 @@
 
 package:
   name: generator
-  {% if dev %}
-  version: {{ environ.get('GIT_DESCRIBE_TAG', '')[1:] }}_{{ environ.get('GIT_DESCRIBE_HASH', '') }}
-  {% else %}
   version: {{ environ.get('GIT_DESCRIBE_TAG', '')[1:] }}
-  {% endif %}
 
 source:
   {% if dev %}
@@ -36,7 +32,10 @@ requirements:
     - pyyaml>=3.12
 
 build:
-  number: 0
+  {% if dev %}
+  string: py_{{ environ.get('GIT_BUILD_STR', '') }}
+  {% endif %}
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', '') }}
   noarch: python
   entry_points:
     - gen = generator.__main__:main
