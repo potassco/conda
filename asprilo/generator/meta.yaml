@@ -37,7 +37,7 @@ requirements:
 
 build:
   number: 0
-  # noarch: python # clashes with data_files
+  noarch: python
   entry_points:
     - gen = generator.__main__:main
 
