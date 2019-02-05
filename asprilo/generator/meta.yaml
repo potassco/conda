@@ -3,7 +3,7 @@
 {% set dev = true %}
 
 package:
-  name: generator
+  name: asprilo-generator
   version: {{ environ.get('GIT_DESCRIBE_TAG', '')[1:] }}
 
 source:
