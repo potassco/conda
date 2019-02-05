@@ -1,0 +1,53 @@
+# Asprilo Generator Conda Recipe
+{% set name = 'asprilo' %}
+{% set dev = true %}
+
+package:
+  name: asprilo-generator
+  version: {{ environ.get('GIT_DESCRIBE_TAG', '')[1:] }}
+
+source:
+  {% if dev %}
+  {%   set rev = 'develop' %}
+  {% else %}
+  {%   set rev = 'master' %}
+  {% endif %}
+  git_rev: {{ rev }}
+  git_url: https://github.com/potassco/{{ name }}.git
+
+extra:
+  channels:
+    - potassco
+    - asprilo
+
+requirements:
+  build:
+    - clingo
+    - python>=3
+    - pyyaml>=3.12
+    - setuptools
+  run:
+    - clingo
+    - python>=3
+    - pyyaml>=3.12
+
+build:
+  {% if dev %}
+  string: py_{{ environ.get('GIT_BUILD_STR', '') }}
+  {% endif %}
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', '') }}
+  noarch: python
+  entry_points:
+    - gen = generator.__main__:main
+
+test:
+  imports:
+    - generator
+  commands:
+    - gen -h
+    - gen -x 9 -y 6 -X 3 -Y 2 -s 9 -p 2 -r 2 -P 4 -u 16 -o 4 -C
+
+about:
+  home: https://github.com/potassco/asprilo/tree/develop/generator
+  license: MIT License
+  summary: "The Asprilo Instance Generator - https://potassco.org/asprilo"
