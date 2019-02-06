@@ -1,6 +1,10 @@
 # Asprilo Generator Conda Recipe
 {% set name = 'asprilo' %}
-{% set dev = true %}
+{% if environ.get('BUILD_RELEASE') %}
+{%   set dev = false %}
+{% else %}
+{%   set dev = true %}
+{% endif %}
 
 package:
   name: asprilo-generator
@@ -18,7 +22,6 @@ source:
 extra:
   channels:
     - potassco
-    - asprilo
 
 requirements:
   build:
@@ -32,10 +35,10 @@ requirements:
     - pyyaml>=3.12
 
 build:
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', '') }}
   {% if dev %}
   string: py_{{ environ.get('GIT_BUILD_STR', '') }}
   {% endif %}
-  number: {{ environ.get('GIT_DESCRIBE_NUMBER', '') }}
   noarch: python
   entry_points:
     - gen = generator.__main__:main
@@ -48,6 +51,13 @@ test:
     - gen -x 9 -y 6 -X 3 -Y 2 -s 9 -p 2 -r 2 -P 4 -u 16 -o 4 -C
 
 about:
-  home: https://github.com/potassco/asprilo/tree/develop/generator
-  license: MIT License
-  summary: "The Asprilo Instance Generator - https://potassco.org/asprilo"
+  home: https://asprilo.github.io/generator/
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.md
+  summary: An instance generator for asprilo
+  description: |
+    This is a generator of problem instances for asprilo.
+  doc_url: https://asprilo.github.io/generator/
+  dev_url: https://github.com/potassco/{{ name }}.git
+
