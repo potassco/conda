@@ -24,14 +24,14 @@ source:
 requirements:
   build:
     - cmake
-    - clingo >=5.4
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
     - python
+    - clingo
   run:
-    - python
-    - clingo >=5.4
+    - {{ pin_compatible('python') }}
+    - {{ pin_compatible('clingo') }}
 
 build:
   number: {{ build }}
