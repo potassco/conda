@@ -1,5 +1,5 @@
 {% set name = 'telingo' %}
-{% set dev = true %}
+{% set dev = false %}
 {% set version = '1.0.1' %}
 {% if dev %}
 {%   set build = 0 %}
