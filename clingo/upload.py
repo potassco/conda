@@ -4,7 +4,7 @@ import urllib.request
 import json
 import re
 import os
-#import locale
+import locale
 
 def get_version():
     url = 'https://raw.githubusercontent.com/potassco/clingo/wip/libclingo/clingo.h'
@@ -29,8 +29,7 @@ def get_build_number(version):
 version = get_version()
 build_number = get_build_number(version)
 
-#files = subprocess.check_output(['conda', 'build', '--output', '.']).decode(locale.getpreferredencoding()).splitlines()
-files = subprocess.check_output(['conda', 'build', '--output', '.']).splitlines()
+files = subprocess.check_output(['conda', 'build', '--output', '.']).decode(locale.getpreferredencoding()).splitlines()
 
 
 build_env = os.environ.copy()
