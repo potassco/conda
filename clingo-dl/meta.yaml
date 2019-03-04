@@ -1,13 +1,7 @@
 {% set name = 'clingoDL' %}
-{% set dev = true %}
-{% if dev %}
-{%   set version = "1.0.0" %}
-{%   set build = 6 %}
-{%   set rev = 'wip' %}
-{% else %}
-{%   set version = "1.0.0" %}
-{%   set build = 0 %}
-{% endif %}
+{% set dev = not environ.get('BUILD_RELEASE', false) %}
+{% set version = environ.get('VERSION_NUMBER', "1.0.0") %}
+{% set build = environ.get('BUILD_NUMBER', "0") %}
 
 package:
   name: clingo-dl
@@ -15,7 +9,7 @@ package:
 
 source:
 {% if dev %}
-  git_rev: {{ rev }}
+  git_rev: wip
   git_url: https://github.com/potassco/{{ name }}.git
 {% else %}
   url: https://github.com/potassco/{{ name }}/archive/v{{ version }}.tar.gz

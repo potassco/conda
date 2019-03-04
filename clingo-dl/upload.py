@@ -8,15 +8,15 @@ import locale
 
 label = "dev"
 channel = "potassco/label/dev"
-package_name = "clingo"
-version_url = 'https://raw.githubusercontent.com/potassco/clingo/wip/libclingo/clingo.h'
+package_name = "clingo-dl"
+version_url = 'https://raw.githubusercontent.com/potassco/clingoDL/wip/clingo-dl.h'
 
 def get_version():
     with urllib.request.urlopen(version_url) as response:
         data = response.read()
         text = data.decode(response.info().get_param('charset', 'utf-8'))
 
-    m = next(re.finditer(r'#define CLINGO_VERSION "([0-9]*\.[0-9]*\.[0-9*])"', text))
+    m = next(re.finditer(r'#define CLINGODL_VERSION "([0-9]*\.[0-9]*\.[0-9*])"', text))
     return m.group(1)
 
 def get_build_number(version):
