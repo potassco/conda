@@ -9,7 +9,7 @@ import locale
 label = "dev"
 channel = "potassco/label/dev"
 package_name = "clingo-dl"
-version_url = 'https://raw.githubusercontent.com/potassco/clingoDL/wip/clingo-dl.h'
+version_url = 'https://raw.githubusercontent.com/potassco/clingoDL/wip/libclingo-dl/clingo-dl.h'
 
 def get_version():
     with urllib.request.urlopen(version_url) as response:
