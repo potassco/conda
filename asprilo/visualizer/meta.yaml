@@ -27,11 +27,11 @@ requirements:
   build:
     - setuptools
     - pyqt>=5
-    - clingo
+    - clingo>=5.3
     - python>=3
   run:
     - pyqt>=5
-    - clingo
+    - clingo>=5.3
     - python>=3
 
 build:
