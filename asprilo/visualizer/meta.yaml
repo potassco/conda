@@ -1,0 +1,58 @@
+# Asprilo Visualizer Conda Recipe
+{% set name = 'asprilo' %}
+{% if environ.get('BUILD_RELEASE') %}
+{%   set dev = false %}
+{% else %}
+{%   set dev = true %}
+{% endif %}
+
+package:
+  name: asprilo-visualizer
+  version: {{ environ.get('GIT_DESCRIBE_TAG', '')[1:] }}
+
+source:
+  {% if dev %}
+  {%   set rev = 'develop' %}
+  {% else %}
+  {%   set rev = 'master' %}
+  {% endif %}
+  git_rev: {{ rev }}
+  git_url: https://github.com/potassco/{{ name }}.git
+
+extra:
+  channels:
+    - potassco
+
+requirements:
+  build:
+    - setuptools
+    - pyqt>=5
+    - clingo>=5.3
+    - python>=3
+  run:
+    - pyqt>=5
+    - clingo>=5.3
+    - python>=3
+
+build:
+  number: {{ environ.get('GIT_DESCRIBE_NUMBER', '') }}
+  {% if dev %}
+  string: py_{{ environ.get('GIT_BUILD_STR', '') }}
+  {% endif %}
+  noarch: python
+  entry_points:
+    - viz = visualizer.__main__:main
+    - viz-solver = visualizer.solver:main
+    - viz-simulator = visualizer.simulator:main
+
+test:
+  imports:
+    - visualizer
+
+about:
+  home: https://asprilo.github.io/visualizer/
+  summary: A tool to visualize asprilo problem instances
+  description: |
+    This is a visualizer of problem instances for asprilo.
+  doc_url: https://asprilo.github.io/visualizer/
+  dev_url: https://github.com/potassco/{{ name }}.git
