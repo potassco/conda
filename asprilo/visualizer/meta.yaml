@@ -22,16 +22,17 @@ source:
 extra:
   channels:
     - potassco
+    - potassco/label/dev
 
 requirements:
   build:
     - setuptools
     - pyqt>=5
-    - clingo>=5.3
+    - clingo>=5.4
     - python>=3
   run:
     - pyqt>=5
-    - clingo>=5.3
+    - clingo>=5.4
     - python>=3
 
 build:
