@@ -12,6 +12,7 @@ fi
 cmake .. \
     -DCMAKE_CXX_COMPILER="${CXX}" \
     -DCMAKE_C_COMPILER="${CC}" \
+    -DPython_ROOT_DIR="${PREFIX}" \
     -DPYTHON_EXECUTABLE="${PYTHON}" \
     -DCLINGO_REQUIRE_PYTHON=ON \
     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
