@@ -1,6 +1,6 @@
 {% set name = 'clingoDL' %}
 {% set dev = not environ.get('BUILD_RELEASE', false) %}
-{% set version = environ.get('VERSION_NUMBER', "1.0.0") %}
+{% set version = environ.get('VERSION_NUMBER', "1.1.0") %}
 {% set build = environ.get('BUILD_NUMBER', "0") %}
 
 package:
@@ -21,10 +21,8 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - python
     - clingo
   run:
-    - {{ pin_compatible('python') }}
     - {{ pin_compatible('clingo') }}
 
 build:
