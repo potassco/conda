@@ -1,0 +1,36 @@
+{% set name = 'clorm' %}
+{% set version = '1.0.1' %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/potassco/{{ name }}.git
+
+requirements:
+  build:
+    - clingo >=5.3.0
+    - python >=3.5
+    - setuptools
+  run:
+    - clingo >=5.3.0
+    - python >=3.5
+
+build:
+  noarch: python
+  script:
+    - python setup.py install --single-version-externally-managed --record record.txt
+
+test:
+  imports:
+    - clorm
+
+about:
+  home:  https://github/github.com/potassco/{{ name }}
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: ORM interface for the Clingo ASP Solver
+  doc_url: https://github.com/potassco/{{ name }}
+  dev_url: https://github.com/potassco/{{ name }}
