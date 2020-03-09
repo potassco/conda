@@ -1,6 +1,6 @@
 {% set name = 'telingo' %}
 {% set dev = false %}
-{% set version = '1.0.1' %}
+{% set version = '2.0.0' %}
 {% if dev %}
 {%   set build = 0 %}
 {%   set rev = 'wip' %}
@@ -22,11 +22,11 @@ source:
 
 requirements:
   build:
-    - clingo >=5.3.0
+    - clingo <=5.4.0
     - python
     - setuptools
   run:
-    - clingo >=5.3.0
+    - clingo <=5.4.0
     - python
 
 build:
