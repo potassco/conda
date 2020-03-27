@@ -28,8 +28,8 @@ test:
 
 about:
   home:  https://github.com/potassco/clingoLP
-  license: GPL3
-  license_family: GPL3
+  license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: clingo with theory propagator for linear programming
   doc_url: https://github.com/potassco/clingoLP
