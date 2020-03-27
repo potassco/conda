@@ -1,12 +1,12 @@
-{% set name = 'clingolp' %}
 {% set version = '0.1.0' %}
 
 package:
-  name: {{ name }}
+  name: clingo-lp
   version: {{ version }}
 
 source:
   git_url: https://github.com/potassco/clingoLP.git
+  git_rev: v{{ version }}
 
 requirements:
   build:
@@ -31,6 +31,6 @@ about:
   license: GPL3
   license_family: GPL3
   license_file: LICENSE
-  summary: clingo with theory propagator for linear programming 
+  summary: clingo with theory propagator for linear programming
   doc_url: https://github.com/potassco/clingoLP
   dev_url: https://github.com/potassco/clingoLP
