@@ -1,5 +1,5 @@
 clingo:
-    - 5.4
+    - 5.5
 
 pin_run_as_build:
     clingo: x.x
