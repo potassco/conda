@@ -1,9 +1,9 @@
 {% set name = 'clorm' %}
-{% set version = '1.0.2' %}
+{% set data = load_setup_py_data() %}
 
 package:
   name: {{ name }}
-  version: {{ version }}
+  version: {{ data.get('version') }}
 
 source:
   git_url: https://github.com/potassco/{{ name }}.git
