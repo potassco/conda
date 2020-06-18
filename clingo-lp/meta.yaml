@@ -11,9 +11,7 @@ source:
 requirements:
   build:
     - setuptools
-    - python
   run:
-    - python
     - clingo >=5.4.0
     - lpsolve55
 
