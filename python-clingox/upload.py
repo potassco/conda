@@ -8,7 +8,7 @@ import locale
 
 label = "dev"
 channel = "potassco/label/dev"
-package_name = "clingo-dl"
+package_name = "python-clingox"
 version_url = 'https://raw.githubusercontent.com/potassco/python-clingox/wip/setup.py'
 
 def get_version():

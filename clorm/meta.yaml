@@ -27,10 +27,10 @@ test:
     - clorm
 
 about:
-  home:  https://github/github.com/potassco/{{ name }}
+  home:  https://github.com/potassco/{{ name }}
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: ORM interface for the Clingo ASP Solver
-  doc_url: https://github.com/potassco/{{ name }}
+  doc_url: https://clorm.readthedocs.io/en/latest/index.html
   dev_url: https://github.com/potassco/{{ name }}
