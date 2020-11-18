@@ -1,0 +1,44 @@
+{% set dev = not environ.get('BUILD_RELEASE', False) %}
+{% set version = environ.get('VERSION_NUMBER', "1.0.0") %}
+{% set build = environ.get('BUILD_NUMBER', "0") %}
+{% set name = "clingo-lpx" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+{% if dev %}
+  git_rev: master
+  git_url: https://github.com/rkaminsk/simplex.git
+{% else %}
+  url: https://github.com/rkaminsk/simplex/archive/v{{ version }}.tar.gz
+{% endif %}
+
+requirements:
+  build:
+    - cmake
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
+    - gmp
+    - clingo
+  run:
+    - gmp
+    - {{ pin_compatible('clingo') }}
+
+build:
+  number: {{ build }}
+  skip: True [win and vc<14]
+
+test:
+  commands:
+    - clingo-lpx --version
+
+about:
+  home:  https://potassco.org/
+  license: MIT
+  summary: A solver for logic programs with linear inequalities.
+  description: The clingo-lpx solver extends the clingo ASP system with support for liner inequalities.
+  doc_url: https://potassco.org/
+  dev_url: https://github.com/rkaminsk/simplex
