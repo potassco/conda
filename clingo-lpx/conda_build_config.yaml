@@ -6,4 +6,4 @@ pin_run_as_build:
 
 # from https://github.com/phracker/MacOSX-SDKs
 CONDA_BUILD_SYSROOT:
-    - /opt/MacOSX10.9.sdk # [osx]
+    - /opt/MacOSX10.14.sdk # [osx]
