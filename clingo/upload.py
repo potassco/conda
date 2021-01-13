@@ -45,5 +45,4 @@ subprocess.call(['conda', 'build', '-c', channel, '.'], env=build_env)
 
 for f in files:
     print('uploading:', ['anaconda', 'upload', f, '--label', label])
-    print('token:', os.environ.get("ANACONDA_API_TOKEN", "****")[0:4])
     subprocess.call(['anaconda', 'upload', f, '--label', label])
