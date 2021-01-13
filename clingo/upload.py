@@ -44,4 +44,5 @@ assert(len(files) > 0)
 subprocess.call(['conda', 'build', '-c', channel, '.'], env=build_env)
 
 for f in files:
+    print('uploading:', ['anaconda', 'upload', f, '--label', label])
     subprocess.call(['anaconda', 'upload', f, '--label', label])
