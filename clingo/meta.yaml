@@ -30,6 +30,7 @@ requirements:
     - python
   run:
     - python
+    - cffi
 
 build:
   number: {{ build }}
