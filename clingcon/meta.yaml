@@ -22,8 +22,11 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - clingo
+    - python
   run:
     - {{ pin_compatible('clingo') }}
+    - python
+    - cffi
 
 build:
   number: {{ build }}
