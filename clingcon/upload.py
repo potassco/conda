@@ -14,8 +14,6 @@ package_name = "clingcon"
 version_url = 'https://raw.githubusercontent.com/potassco/clingcon/wip/libclingcon/clingcon.h'
 
 channels = ['-c', channel]
-if platform.system() == 'Darwin':
-    channels.extend(['-c', 'conda-forge'])
 
 def get_version():
     with urllib.request.urlopen(version_url) as response:
