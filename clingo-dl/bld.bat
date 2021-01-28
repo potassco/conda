@@ -3,7 +3,7 @@ mkdir build
 cmake -G "%CMAKE_GENERATOR%" -H. -Bbuild ^
     -DCMAKE_CXX_COMPILER="%CXX%" ^
     -DCMAKE_INSTALL_PREFIX="%PREFIX%" ^
-    -DCLINGODL_BUILD_WITH_SYSTEM_CLINGO=On ^
+    -DPYCLINGODL_ENABLE="require" ^
     -DCMAKE_INSTALL_BINDIR="."
 
 cmake --build build --config Release
