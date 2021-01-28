@@ -10,7 +10,7 @@ import sys
 label = "dev"
 channel = "potassco/label/dev"
 package_name = "clingo-dl"
-version_url = 'https://raw.githubusercontent.com/potassco/clingo-dl/wip/libclingodl/clingo-dl.h'
+version_url = 'https://raw.githubusercontent.com/potassco/clingo-dl/wip/libclingo-dl/clingo-dl.h'
 
 channels = ['-c', channel]
 
