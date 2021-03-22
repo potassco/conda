@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = '0.1.1' %}
 
 package:
   name: clingo-lp
@@ -17,7 +17,7 @@ requirements:
 
 build:
   noarch: python
-  number: 1  # NOTE: increment for new build/set to zero for new version
+  number: 0  # NOTE: increment for new build/set to zero for new version
   script:
     - python setup.py install --single-version-externally-managed --record record.txt
   entry_points:
