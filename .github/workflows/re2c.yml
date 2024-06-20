@@ -11,9 +11,9 @@ jobs:
       fail-fast: false
       matrix:
         os:
-        - windows-latest
-        #- ubuntu-latest
-        #- macos-latest
+        - ubuntu-latest
+        - macos-latest
+        - windows-2019
 
     steps:
       - name: Checkout repo
@@ -31,7 +31,7 @@ jobs:
       - name: Install prerequisites
         shell: pwsh
         run: |
-          conda config --set anaconda_upload no
+          conda config --set anaconda_upload yes
           conda install conda-build anaconda-client
 
       - name: Install macos SDK
