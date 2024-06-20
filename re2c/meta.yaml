@@ -1,5 +1,5 @@
 {% set name = 're2c' %}
-{% set version = "1.0.3" %}
+{% set version = "3.1" %}
 {% set build = 0 %}
 
 package:
@@ -7,8 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/skvadrik/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz [not win]
-  url: https://cs.uni-potsdam.de/~kaminski/{{ name }}-{{ version }}.zip [win]
+  url: https://github.com/skvadrik/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.xz
 
 requirements:
   build:
