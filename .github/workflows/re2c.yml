@@ -25,7 +25,6 @@ jobs:
         if: ${{ matrix.os == 'windows-latest' }}
         uses: microsoft/setup-msbuild@v1.1
         with:
-          vs-version: '[15,16)'
           msbuild-architecture: x64
 
       - name: setup miniconda
