@@ -11,6 +11,7 @@ source:
 
 requirements:
   build:
+    - cmake
     - ninja
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
