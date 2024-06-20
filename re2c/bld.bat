@@ -1,6 +1,6 @@
 mkdir re2c_build
 
-cmake -G "Ninja" -S. -B"re2c_build" ^
+cmake -G "NMake" -S. -Bre2c_build ^
     -DCMAKE_CXX_COMPILER="%CXX%" ^
     -DCMAKE_C_COMPILER="%CC%" ^
     -DCMAKE_BUILD_TYPE=Release ^
