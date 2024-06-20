@@ -12,8 +12,8 @@ source:
 requirements:
   build:
     - ninja
-    - {{ compiler('c') }} [not win]
-    - {{ compiler('cxx') }} [not win]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
 
 build:
   number: {{ build }}
